@@ -14,4 +14,4 @@ collections:
         name: "home"
         fields:
           - { label: "Заголовок", name: "title", widget: "string" }
-          - { label: "Текст", name: "body", widget: "text" }
+          - { label: "Текст", name: "body", widget: "markdown" }
