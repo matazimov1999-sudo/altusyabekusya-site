@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <title>Админка ❤️</title>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Админка 💖</title>
+  </head>
+  <body>
+    <script>
+      if (window.location.hash.includes("recovery_token")) {
+        window.location.href =
+          "/admin/#/reset-password" + window.location.hash;
+      }
+    </script>
 
-  <!-- Netlify Identity -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
-</head>
-
-<body>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.open();
-        }
-      });
-    }
-  </script>
-</body>
+    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+  </body>
 </html>
